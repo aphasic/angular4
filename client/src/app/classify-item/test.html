@@ -1,0 +1,51 @@
+<div class="col-sm-12 col-lg-4">
+  <div class="panel panel-danger">
+    <div class="panel-heading">一级分类</div>
+    <div class="panel-body">
+      <button class="btn btn-info btn-sm" (click)="firstClass.addFlag=true" [disabled] ="firstClass.batchFlag"><span class="glyphicon glyphicon-plus"> </span> 添加分类</button>
+      <button class="btn btn-info btn-sm" [hidden]="!firstClass.batchFlag"><span class="glyphicon glyphicon-trash"> </span> 批量删除</button>
+      <button class="btn btn-info btn-sm" (click)="firstClass.batchFlag=!firstClass.batchFlag" [[(ngModel)]="firstClass.batchFlag?'取消管理':'批量管理'" [disabled]="firstClass.addFlag"></button>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <tr>
+            <th [hidden]="!firstClass.batchFlag"><input type="checkbox" [[(ngModel)]="firstClass.all"></th>
+            <th>#</th>
+            <th>分类名称</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td [hidden]="!firstClass.batchFlag">
+              <input type="checkbox" [checked]="firstClass.all">
+            </td>
+            <td>1</td>
+            <td>{{firstClass.addData}}</td>
+            <td>
+              <button class="btn btn-info btn-xs">详情</button>
+              <button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-pencil"></span></button>
+              <button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+            </td>
+          </tr>
+          <!--<tr [hidden]="!firstClass.addFlag">-->
+          <!--<td>1</td>-->
+          <!--<td>-->
+          <!--<input type="text" name="addFirstClass" class="form-control input-in-table" [(ngModel)]="binding"="firstClass.addData" required="">-->
+          <!--</td>-->
+          <!--<td>-->
+          <!--<button class="btn btn-info btn-xs" ng-disabled="mainForm.addFirstClass.$invalid" ng-click="addClass(firstClass,0,firstClass.addData)"><span class="glyphicon glyphicon-ok"></span></button>-->
+          <!--<button class="btn btn-danger btn-xs" ng-click="firstClass.addFlag=false"><span class="glyphicon glyphicon-remove"></span></button>-->
+          <!--</td>-->
+          <!--</tr>-->
+          <!--<tr ng-show="firstClass.addFlag">-->
+          <!--<td colspan="3" ng-show="firstClass.addAgainFlag" class="text-primary">-->
+          <!--注：添加成功，可继续添加！-->
+          <!--</td>-->
+          <!--<td colspan="3" ng-show="firstClass.addAgainFlag === false" class="text-primary">-->
+          <!--注：添加失败，请检查！-->
+          <!--</td>-->
+          <!--</tr>-->
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

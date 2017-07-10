@@ -1,0 +1,6 @@
+<div class="panel panel-warning">
+  <div class="panel-heading">所有分类</div>
+  <div class="panel-body">
+    <app-classify-item [parentid]="parent._id" [parentname]="parent.name" [parentIndex]="i" (onDetail)="parentTransmit($event,i)" *ngFor="let parent of parents;let i = index;"></app-classify-item>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+/*--初始化css开始--*/
+body {
+  background: url('app/resource/background.png') repeat;
+  margin: 0;
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+/*--初始化css结束--*/
+
+/*--自定义css开始--*/
+body .badge-blue{
+  margin: 0 5px;
+  background-color: #337ab7;
+}
+body .badge-red{
+  margin: 0 5px;
+  background-color: #d9534f;
+}
+
+/*--自定义css结束--*/
+#main_section{
+  margin: 20px;
+  margin-left: 120px;
+  overflow: auto;
+}

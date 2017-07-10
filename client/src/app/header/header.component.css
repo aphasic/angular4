@@ -1,0 +1,21 @@
+h1{
+  font-size: 32px;
+  line-height: 120px;
+  margin: 0;
+  text-align: center;
+}
+h1 span{
+  color: #fe8c00;
+}
+.container{
+  width: 100%;
+}
+#main_head{
+  height: 120px;
+  background: #0e0e0e;
+  color: #fff;
+}
+#nav_search{
+  height: 36px;
+  margin-top: 43px;
+}
